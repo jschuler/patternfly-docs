@@ -5,9 +5,6 @@
   "version": "1.0.0",
   "author": "Red Hat",
   "license": "MIT",
-  "engines": {
-    "node": "16"
-  },
   "scripts": {
     "analyze": "theme-patternfly-org build all --analyze",
     "build": "theme-patternfly-org build all",
