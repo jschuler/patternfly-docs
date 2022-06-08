@@ -17,9 +17,11 @@
     "screenshots": "theme-patternfly-org screenshots"
   },
   "dependencies": {
-    "@breakaway/theme-patternfly-org": "^1.0.0",
+    "@breakaway/theme-patternfly-org": "^1.0.1",
+    "@patternfly-labs/react-form-wizard": "^1.7.19",
     "@patternfly/quickstarts": "2.2.3",
-    "@patternfly/react-docs": "5.67.3"
+    "@patternfly/react-docs": "5.67.3",
+    "@react-hook/resize-observer": "^1.2.5"
   },
   "devDependencies": {
     "react": "^17.0.0",
@@ -34,6 +36,7 @@
     "monaco-editor": "0.21.3",
     "monaco-editor-webpack-plugin": "2.1.0",
     "sharp": "0.30.6",
-    "chromedriver": "101.0.0"
+    "chromedriver": "101.0.0",
+    "node-sass": "7.0.1"
   }
 }
