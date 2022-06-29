@@ -1,23 +1,27 @@
 {
   "name": "@patternfly/docs",
   "description": "Documentation for PatternFly extensions",
-  "private": false,
+  "private": true,
   "version": "1.0.0",
   "author": "Red Hat",
   "license": "MIT",
   "scripts": {
-    "analyze": "theme-patternfly-org build all --analyze",
-    "build": "theme-patternfly-org build all",
-    "build:server": "theme-patternfly-org build server",
-    "build:client": "theme-patternfly-org build client",
-    "clean": "rm -rf .cache public size-plugin.json src/generated",
-    "develop": "theme-patternfly-org start",
-    "generate": "theme-patternfly-org generate",
-    "test:a11y": "patternfly-a11y --file .cache/fullscreenPages.json --prefix http://localhost:9000/v4",
-    "screenshots": "theme-patternfly-org screenshots"
+    "analyze": "pf-docs-framework build all --analyze",
+    "build": "pf-docs-framework build all",
+    "serve": "pf-docs-framework serve public",
+    "build:server": "pf-docs-framework build server",
+    "build:client": "pf-docs-framework build client",
+    "clean": "rm -rf .cache public size-plugin.json",
+    "develop": "pf-docs-framework start",
+    "generate": "pf-docs-framework generate",
+    "test:a11y": "patternfly-a11y --file .cache/fullscreenPages.json --prefix http://localhost:9000",
+    "screenshots": "pf-docs-framework screenshots --urlPrefix http://localhost:5000",
+    "docs:build": "pf-docs-framework build client --output public",
+    "docs:serve": "pf-docs-framework serve public --port 5004",
+    "docs:develop": "pf-docs-framework start",
+    "docs:screenshots": "pf-docs-framework screenshots --urlPrefix http://localhost:8006"
   },
   "dependencies": {
-    "@breakaway/theme-patternfly-org": "^1.0.1",
     "@patternfly-labs/react-form-wizard": "^1.7.19",
     "@patternfly/quickstarts": "2.2.3",
     "@patternfly/react-docs": "5.67.3",
@@ -25,18 +29,11 @@
   },
   "devDependencies": {
     "react": "^17.0.0",
-    "react-dom": "^17.0.0"
+    "react-dom": "^17.0.0",
+    "@breakaway/documentation-framework": "1.0.12"
   },
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0",
     "react-dom": "^16.8.0 || ^17.0.0"
-  },
-  "resolutions": {
-    "webpack": "4.44.1",
-    "monaco-editor": "0.21.3",
-    "monaco-editor-webpack-plugin": "2.1.0",
-    "sharp": "0.30.6",
-    "chromedriver": "101.0.0",
-    "node-sass": "7.0.1"
   }
 }

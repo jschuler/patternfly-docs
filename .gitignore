@@ -1,5 +1,5 @@
-# Files from theme-patternfly-org
-.cache
-src/generated
-public
 node_modules
+# Files from @breakaway/documentation-framework
+.cache
+public
+patternfly-docs/generated/**/*.js
